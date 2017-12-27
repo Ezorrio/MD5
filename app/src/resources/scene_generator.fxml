@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.ezorrio.md5.controller.GeneratorController">
+    <children>
+        <Button fx:id="bSave" layoutX="57.0" layoutY="285.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0"
+                text="Save"/>
+        <Spinner fx:id="spLength" layoutX="57.0" layoutY="81.0">
+            <valueFactory>
+                <SpinnerValueFactory.IntegerSpinnerValueFactory max="100" min="4"/>
+            </valueFactory>
+        </Spinner>
+        <Label layoutX="100.0" layoutY="53.0" text="Minimal length"/>
+        <Label layoutX="58.0" layoutY="14.0" text="Passphrase options:">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <CheckBox fx:id="cbUpper" layoutX="63.0" layoutY="127.0" mnemonicParsing="false" prefHeight="31.0"
+                  prefWidth="176.0" text="Require uppercase"/>
+        <CheckBox fx:id="cbLower" layoutX="63.0" layoutY="169.0" mnemonicParsing="false" prefHeight="31.0"
+                  prefWidth="176.0" text="Require lowercase"/>
+        <CheckBox fx:id="cbDigit" layoutX="63.0" layoutY="217.0" mnemonicParsing="false" prefHeight="31.0"
+                  prefWidth="176.0" text="Require digit"/>
+    </children>
+</AnchorPane>
